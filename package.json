@@ -6,8 +6,8 @@
     "react-icons": "4.4.0"
   },
   "devDependencies": {
-    "vite": "latest",
-    "@vitejs/plugin-react": "*"
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "latest"
   },
   "scripts": {
     "start": "vite",
