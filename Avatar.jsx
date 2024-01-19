@@ -27,6 +27,20 @@ import { IoPersonSharp } from 'react-icons/io5'
  * color classes to add to the wrapper div.
  */
 
-export default function Avatar() {
-  return <h2>Avatar component here!</h2>
+export default function Avatar({ src, alt, children }) {
+
+    const iconColors = ['navy', 'pink', 'red', 'blue', 'green']
+    const randomColor = iconColors[Math.floor(Math.random() * iconColors.length)]
+
+    return (
+        <div className='container'>
+            {src ? (
+                <img src={src} alt={alt} className='avatar' />
+            ) : children ? (
+                <div className='avatar avatar-letters'>{children}</div>
+            ) : (
+                <IoPersonSharp className={`avatar avatar-icon ${randomColor}`}/>
+            )}
+        </div>
+    )
 }
